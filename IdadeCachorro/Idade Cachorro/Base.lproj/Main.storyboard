@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Idade_Cachorro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="omB-Ce-kRj">
+                                <rect key="frame" x="56" y="30" width="263" height="150"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite a idade do seu dog:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAd-6W-TBH">
+                                <rect key="frame" x="87" y="190" width="200" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hrd-Tw-T8o">
+                                <rect key="frame" x="116" y="223" width="143" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eik-eu-Yfm">
+                                <rect key="frame" x="136" y="262" width="103" height="30"/>
+                                <state key="normal" title="Calcular idade!"/>
+                                <connections>
+                                    <action selector="calcular:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hq2-jZ-Jxa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X85-io-zGl">
+                                <rect key="frame" x="188" y="307" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Eik-eu-Yfm" firstAttribute="top" secondItem="Hrd-Tw-T8o" secondAttribute="bottom" constant="12" id="2ah-zF-2qm"/>
+                            <constraint firstItem="pAd-6W-TBH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="54k-g8-gLI"/>
+                            <constraint firstItem="X85-io-zGl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6tL-De-QOr"/>
+                            <constraint firstItem="omB-Ce-kRj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Oi-aq-y0y"/>
+                            <constraint firstItem="omB-Ce-kRj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="30" id="Dyu-2g-77f"/>
+                            <constraint firstItem="Eik-eu-Yfm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EFL-Sb-byo"/>
+                            <constraint firstItem="Hrd-Tw-T8o" firstAttribute="top" secondItem="pAd-6W-TBH" secondAttribute="bottom" constant="12" id="XlZ-cX-CBa"/>
+                            <constraint firstItem="X85-io-zGl" firstAttribute="top" secondItem="Eik-eu-Yfm" secondAttribute="bottom" constant="12" id="Z7r-kR-ZH2"/>
+                            <constraint firstItem="pAd-6W-TBH" firstAttribute="top" secondItem="omB-Ce-kRj" secondAttribute="bottom" constant="10" id="d1E-pn-Jff"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="omB-Ce-kRj" secondAttribute="trailing" constant="40" id="lh5-w8-rns"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hrd-Tw-T8o" secondAttribute="trailing" constant="100" id="o68-pS-bS6"/>
+                            <constraint firstItem="omB-Ce-kRj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="pIc-fF-rvl"/>
+                            <constraint firstItem="Hrd-Tw-T8o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="vYz-4Q-xG5"/>
+                            <constraint firstItem="Hrd-Tw-T8o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yhA-Ut-mXm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="idadeText" destination="Hrd-Tw-T8o" id="ZoE-Eh-PMt"/>
+                        <outlet property="resultadoLabel" destination="X85-io-zGl" id="eUS-Yp-CdK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dog" width="200" height="150"/>
+    </resources>
+</document>
