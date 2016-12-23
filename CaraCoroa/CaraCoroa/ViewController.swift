@@ -19,6 +19,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "enviar" {
+            let resultviewController = segue.destination as! ResultViewController
+            let random = arc4random_uniform(2)
+            resultviewController.random = Int(random)
+        }
+    }
 
 
 }
